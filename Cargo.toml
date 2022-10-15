@@ -1,0 +1,19 @@
+[package]
+name = "visit-bytes"
+description = "Visitor abstraction for byteslices and such"
+repository = "https://github.com/YZITE/visit-bytes"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0 WITH LLVM-exception"
+
+[dependencies]
+
+[dependencies.camino_]
+package = "camino"
+version = "1.0"
+optional = true
+
+[features]
+default = ["alloc"]
+alloc = []
+camino = ["alloc", "camino_"]
